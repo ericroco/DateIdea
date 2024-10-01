@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selecciona tu cita</title>
+    <title>Choose the [date]</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         body {
@@ -29,7 +29,7 @@
             margin-bottom: 20px;
         }
         img {
-            width: 400px;
+            width: 600px;
             height: auto;
         }
         .input-container {
@@ -47,6 +47,23 @@
             color: #000000;
             cursor: pointer;
         }
+        .btn-proceed {
+            width: 200px;
+            height: 50px;
+            font-size: 1.5em;
+            color: #ffffff;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            border: none;
+            justify-content: center;
+            align-items: center;
+            transition: color 0.3s;
+            font-family: "Press Start 2P", sans-serif;
+        }
+        .btn-proceed:hover {
+            color: #ffff00;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +80,9 @@
     <div class="input-container">
         <input type="date" id="fecha-cita" name="fecha-cita">
         <input type="time" id="hora-cita" name="hora-cita">
+
+        <button class="btn-proceed">Proceed</button>
+
     </div>
 
 </body>
