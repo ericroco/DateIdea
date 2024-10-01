@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu cita</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        h1 {
+            font-size: 1em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 400px;
+            height: auto;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        input[type="date"], input[type="time"] {
+            padding: 10px;
+            font-size: 1em;
+            font-family: 'Press Start 2P', sans-serif;
+            background-color: #ffffff;
+            border: 2px solid #ffffff;
+            color: #000000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="image-container">
+        <img src="Imagen\Spamton.png">
+    </div>
+
+
+    <h1>YOU WANT [[Hyperlink Blocked]], DON'T YOU.</h1>
+
+
+    <div class="input-container">
+        <input type="date" id="fecha-cita" name="fecha-cita">
+        <input type="time" id="hora-cita" name="hora-cita">
+    </div>
+
+</body>
+</html>
