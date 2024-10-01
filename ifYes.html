@@ -68,22 +68,34 @@
 </head>
 <body>
 
-
     <div class="image-container">
-        <img src="Imagen\Spamton.png">
+        <img src="Imagen/Spamton.png" alt="Imagen decorativa">
     </div>
 
-
     <h1>YOU WANT [[Hyperlink Blocked]], DON'T YOU.</h1>
-
 
     <div class="input-container">
         <input type="date" id="fecha-cita" name="fecha-cita">
         <input type="time" id="hora-cita" name="hora-cita">
 
-        <button class="btn-proceed">Proceed</button>
-
+        <button class="btn-proceed" onclick="guardarFechaHora();">Proceed</button>
     </div>
+
+    <script>
+        function guardarFechaHora() {
+            // Obtener los valores de fecha y hora
+            const fecha = document.getElementById('fecha-cita').value;
+            const hora = document.getElementById('hora-cita').value;
+
+            // Almacenar en localStorage
+            localStorage.setItem('fechaCita', fecha);
+            localStorage.setItem('horaCita', hora);
+
+            // Redirigir a la página de ideas
+            window.location.href = 'Ideas.html';
+        }
+    </script>
 
 </body>
 </html>
+

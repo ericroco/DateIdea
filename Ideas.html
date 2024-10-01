@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        img {
+            width: 300px; 
+            height: auto;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 1em;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #ffffff;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            text-align: center;
+        }
+        input[type="text"]::placeholder {
+            color: #aaaaaa;
+        }
+        .btn-proceed {
+            width: 200px;
+            height: 50px;
+            font-size: 1.5em;
+            color: #ffffff;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            border: none;
+            justify-content: center;
+            align-items: center;
+            transition: color 0.3s;
+            font-family: "Press Start 2P", sans-serif;
+        }
+        .btn-proceed:hover {
+            color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>[[Ideas]]</h1>
+
+    <img src="Imagen/acidtunel.jpg" alt="Imagen de ideas"> 
+
+    <p>Date idea: (deja el espacio vacío si no tienes xd)</p>
+
+    <input type="text" id="idea-text" placeholder="im glad that jeis is jeis">
+
+    <div class="input-container">
+        <button class="btn-proceed" onclick="guardarIdea();">Proceed</button>
+    </div>
+
+    <script>
+        function guardarIdea() {
+            // Obtener el valor del texto ingresado
+            const idea = document.getElementById('idea-text').value;
+
+            // Almacenar el texto en localStorage
+            localStorage.setItem('ideaCita', idea);
+
+            // Redirigir a la página resumen
+            window.location.href = 'resumen.html';
+        }
+    </script>
+
+</body>
+</html>
+

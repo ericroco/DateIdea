@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elecciones del Usuario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .resultado {
+            font-size: 1.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Elecciones del Usuario</h1>
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+ 
+        const eleccionCita = localStorage.getItem('eleccionCita'); 
+        const fechaCita = localStorage.getItem('fechaCita'); 
+        const horaCita = localStorage.getItem('horaCita'); 
+        const idea = localStorage.getItem('idea'); 
+
+        // Función para mostrar las elecciones
+        function mostrarElecciones() {
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Construir el texto a mostrar
+            let resultado = '';
+            if (eleccionCita) {
+                resultado += `Elección de cita: ${eleccionCita}<br>`;
+            }
+            if (fechaCita) {
+                resultado += `Fecha de la cita: ${fechaCita}<br>`;
+            }
+            if (horaCita) {
+                resultado += `Hora de la cita: ${horaCita}<br>`;
+            }
+            if (idea) {
+                resultado += `Idea ingresada: ${idea}<br>`;
+            }
+        }
+
+        // Llamar a la función para mostrar elecciones al cargar la página
+        mostrarElecciones();
+    </script>
+
+</body>
+</html>
